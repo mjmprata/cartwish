@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import './ProductCard.css'
+import config from '../config.json'
 
 import star from '../../assets/white-star.png'
 import basket from '../../assets/basket.png'
@@ -14,7 +15,7 @@ const ProductCard = ({product}) => {
     <article className="product_card">
         <div className="product_image">
             <NavLink to={`/product/${product?._id}`}>
-               <img src={`http://localhost:5000/products/${product?.images[0]}`} alt="product image"/></NavLink>
+               <img src={`${config.backEndURL}/products/${product?.images[0]}`} alt="product image"/></NavLink>
         </div>
         <div className="product_details">
             <h3 className="product_price">${product?.price}</h3>

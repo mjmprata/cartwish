@@ -2,6 +2,8 @@ import React, {useState, useContext} from 'react'
 import { useParams } from 'react-router-dom';
 
 import './SingleProductPage.css'
+import config from '../../config.json'
+
 import QuantityInput from './QuantityInput';
 import useData from '../../hooks/useData.js'
 import Loader from './../Common/Loader';
@@ -28,13 +30,13 @@ const SingleProductPage = () => {
                 <div className="single_product_thumbnails">
                     {
                         product.images.map((image, index) =>
-                                <img src={`http://localhost:5000/products/${image}`} 
+                                <img src={`${config.backEndURL}/products/${image}`} 
                                      alt={product.title}
                                      className={selectedImage === index ? 'selected_image' : ''}
                                      onClick={() => setSelectedImage(index)}/>)
                     }
                 </div>
-                <img src={`http://localhost:5000/products/${product.images[selectedImage]}`} alt={product.title} className="single_product_display" />
+                <img src={`${config.backEndURL}/products/${product.images[selectedImage]}`} alt={product.title} className="single_product_display" />
             </div>
 
             <div className="single_product_details">

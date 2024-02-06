@@ -1,6 +1,8 @@
 import React from 'react'
 
 import './ProductsSidebas.css'
+import config from '../../config.json'
+
 import useData from '../../hooks/useData.js'
 import LinkWithIcon from '../Navbar/LinkWithIcon'
 
@@ -20,7 +22,7 @@ const ProductsSidebar = () => {
                     id={category._id}
                     title={category.name}
                     link={`/products?category=${category.name}`} 
-                    emoji={`http://localhost:5000/category/${category.image}`}
+                    emoji={`${config.backEndURL}/category/${category.image}`}
                     sidebar={true}/>)}
         </div>
     </aside>
