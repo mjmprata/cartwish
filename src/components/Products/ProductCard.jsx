@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import './ProductCard.css'
-import config from '../config.json'
+import config from '../../config.json'
 
 import star from '../../assets/white-star.png'
 import basket from '../../assets/basket.png'
