@@ -30,13 +30,13 @@ const SingleProductPage = () => {
                 <div className="single_product_thumbnails">
                     {
                         product.images.map((image, index) =>
-                                <img src={`${config.backEndURL}/products/${image}`} 
+                                <img src={`${config.backendURL}/products/${image}`} 
                                      alt={product.title}
                                      className={selectedImage === index ? 'selected_image' : ''}
                                      onClick={() => setSelectedImage(index)}/>)
                     }
                 </div>
-                <img src={`${config.backEndURL}/products/${product.images[selectedImage]}`} alt={product.title} className="single_product_display" />
+                <img src={`${config.backendURL}/products/${product.images[selectedImage]}`} alt={product.title} className="single_product_display" />
             </div>
 
             <div className="single_product_details">

@@ -41,7 +41,7 @@ const CartPage = () => {
     return (
         <section className="align_center cart_page">
             <div className="align_center user_info">
-                <img src={`${config.backEndURL}/profile/${user?.profilePic}`} alt="User profile"/>
+                <img src={`${config.backendURL}/profile/${user?.profilePic}`} alt="User profile"/>
                 <div>
                     <p className="user_name">{user?.name}</p>
                     <p className="user_email">{user?.email}</p>

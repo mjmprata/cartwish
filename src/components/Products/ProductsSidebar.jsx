@@ -22,7 +22,7 @@ const ProductsSidebar = () => {
                     id={category._id}
                     title={category.name}
                     link={`/products?category=${category.name}`} 
-                    emoji={`${config.backEndURL}/category/${category.image}`}
+                    emoji={`${config.backendURL}/category/${category.image}`}
                     sidebar={true}/>)}
         </div>
     </aside>
