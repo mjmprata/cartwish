@@ -15,7 +15,6 @@ const schema = z.object ({
 const LoginPage = () => {
     const [formError, setFormError] = useState("")
     const location = useLocation()
-    console.log("login location: ", location);
 
     const {register, handleSubmit, formState: {errors}} = useForm({resolver: zodResolver(schema)})
 

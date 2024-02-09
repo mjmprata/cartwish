@@ -34,7 +34,6 @@ const Navbar = () => {
   }
 
   const handleKeyDown = (e) => {
-    // console.log(e.key);
 
     if (selectedItem < suggestions.length) {
       if (e.key === "ArrowDown") {
